@@ -189,7 +189,8 @@ header .inner ul.gnb li a.on{
 /* 디자인 */
 #work .inner .design ul{
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    flex-flow: wrap;
 }
 #work .inner .design ul.box li{
     position: relative;
@@ -241,8 +242,8 @@ header .inner ul.gnb li a.on{
     height: 800px;
     margin-top: 90px;
 }
-.donghwa{
-    width: 90%;
+.donghwa1{
+    height: 80%;
     margin-top: 120px;
 }
 .sosaeng{
@@ -252,6 +253,14 @@ header .inner ul.gnb li a.on{
 .cardnews{
     width: 66%;
     margin-top: 70px;
+}
+.donghwa2{
+    height: 80%;
+    margin-top: 120px;
+}
+.donghwa3{
+    height: 70%;
+    margin-top: 150px;
 }
 
 /* about */
