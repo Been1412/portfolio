@@ -1,0 +1,159 @@
+/* @media ( min-width:320px ) and ( max-width:767px ){
+
+} */
+
+@media ( max-width:767px ){
+    .modal_login{
+        width: 100%;
+    }
+    .modal_login .iogin{
+        width: 90%;
+        padding: 60px 30px;
+    }
+    .modal_login .iogin .login_save{
+        font-size: 12px;
+    }
+    .modal_login .iogin span{
+        font-size: 14px;
+    }
+    .modal_login .iogin span a{
+        font-size: 16px;
+    }
+    .modal_login .iogin p{
+        font-size: 12px;
+    }
+
+    /* header */
+    header{
+        width: 100%;
+        padding: 30px 20px;
+    }
+    header h1 a{
+        width: 100px;
+    }
+
+    /* intro */
+    section.intro{
+        height: 100vh;
+    }
+    .intro .tit h2{
+        font-size: 42px;
+    }
+    .intro .tit h5{
+        font-size: 20px;
+    }
+    .intro .tit p{
+        font-size: 16px;
+    }
+    .intro .tit .getstart{
+        width: 90%;
+    }
+    .intro .tit .getstart button{
+        margin-top: 20px;
+    }
+
+    /* main section */
+    section{
+        padding: 25px 25px;
+    }
+    .enjoy,
+    .preview,
+    .download,
+    .kids{
+        height: auto;
+    }
+    /* 두번째, 네번째 섹션 text,img 위치 바꾸기 */
+    .preview .inner,
+    .kids .inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview .inner .desc,
+    .kids .inner .desc{
+        order: 1;
+    }
+    .preview .inner .imgbox,
+    .kids .inner .imgbox{
+        order: 2;
+    }
+    
+    section .inner{
+        width: 100%;
+        position: static;
+        transform: translate(0);
+
+    }
+    section .inner .desc,
+    section .inner .imgbox{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    section .inner .imgbox img{
+        width: 100%;
+        height: auto;
+    }
+    section .inner .desc h2{
+        font-size: 30px;
+    }
+    section .inner .desc p{
+        font-size: 16px;
+    }
+    .download .inner .imgbox video{
+        width: 63%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 자주묻는 질문 */
+    .faq{
+        padding: 60px 10px;
+    }
+    .faq .faq_inner{
+        width: 100%;
+    }
+    .faq h2{
+        font-size: 30px;
+    }
+    .faq ul li button{
+        font-size: 16px;
+    }
+    .faq ul li p{
+        font-size: 16px;
+    }
+    .faq ul li button .ques{
+        width: 80%;
+        padding-left: 26px;
+        text-indent: 0;
+    }
+    .faq ul li button span{
+        width: 24px;
+    }
+    .faq ul li button span::before{
+        height: 24px;
+        right: 11px;
+    }
+
+    .faq .getstart p{
+        margin:40px 30px 20px;
+    }
+    .faq .getstart button{
+        margin-top: 14px;
+    }
+
+    /* footer */
+    footer{
+        padding: 25px;
+    }
+    footer .ft_inner{
+        width: 100%;
+    }
+    footer .ft_inner .sitemap ul{
+        width: 50%;
+    }
+    footer .ft_inner .sitemap ul:nth-child(3),
+    footer .ft_inner .sitemap ul:last-child{
+        margin-top: 12px;
+    }
+
+}

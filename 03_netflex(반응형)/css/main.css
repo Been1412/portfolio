@@ -1,0 +1,498 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #000;
+    color: #fff;
+}
+body.on{
+    /* 스크롤바 생기지 않게 */
+    overflow: hidden;
+}
+/* 초기화 작업 */
+*{margin: 0;padding: 0;box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none;}
+button{background: none; border: none; cursor: pointer;}
+
+/* 로그인 폼 */
+.modal_login{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+    display: none;
+}
+.modal_login .iogin{
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.9);
+    padding: 60px;
+}
+.modal_login .iogin h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.modal_login .iogin input[type=text],
+.modal_login .iogin input[type=password]{
+    width: 100%;
+    padding: 20px;
+    background: #333;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+.password_login,
+.text_login{
+    position: relative;
+}
+.modal_login .iogin input[type=text] + span,
+.modal_login .iogin input[type=password] + span{
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.modal_login .iogin input[type=text]:focus + span,
+.modal_login .iogin input[type=password]:focus + span{
+    transform: translateY(-13px);
+    font-size: 12px;
+}
+.modal_login .iogin input[type=button]{
+    width: 100%;
+    padding: 16px;
+    background: #E90617;
+    margin-top: 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+.modal_login .iogin .login_save{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 80px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 400;
+}
+
+.modal_login .iogin .login_save label{
+    vertical-align: middle;
+}
+.modal_login .iogin .login_save label input{
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.modal_login .iogin .login_save>a{
+    color: rgba(255,255,255,0.7);
+}
+.modal_login .iogin .login_save>a:hover,
+.modal_login .iogin span a:hover,
+.modal_login .iogin p a:hover{
+    text-decoration: underline;
+}
+.modal_login .iogin span,
+.modal_login .iogin p{
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+}
+.modal_login .iogin span{
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+.modal_login .iogin span a{
+    font-size: 18px;
+    color: #fff;
+}
+.modal_login .iogin p{
+    font-size: 13px;
+}
+.modal_login .iogin p a{
+    color: #2C6FFF;
+}
+
+.modal_login .iogin strong{
+    font-size: 30px;
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    cursor: pointer;
+}
+
+/* header */
+header{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 10;
+}
+header h1 a{
+    display: block;
+    width: 140px;
+    background: url(../images/Netflix_Logo_PMS.png)no-repeat center center;
+    background-size: cover;
+    text-indent: -99999px;
+}
+header .login .lang{
+    display: inline-block;
+    width: 126px;
+    height: 32px;
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 4px;
+}
+header .login .btn_login{
+    font-size: 14px;
+    padding: 8px 14px;
+    background: #E90617;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+/* section intro */
+section.intro{
+    width: 100%;
+    height: 90vh;
+    background: url(../images/KR-ko-20230508-popsignuptwoweeks-perspective_alpha_website_small.jpg)
+    no-repeat;
+    background-size: cover;
+    position: relative;
+}
+section.intro::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.intro .tit{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.intro .tit h2{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.intro .tit h5{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.intro .tit p{
+    font-size: 18px;
+    margin-bottom: 14px;
+    font-weight: 300;
+}
+.intro .tit .getstart{
+    position: relative;
+    display: inline-block;
+}
+.intro .tit .getstart input[type=email]{
+    width: 336px;
+    height: 46px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(0,0,0,0.5);
+    text-indent: 16px;
+    font-size: 15px;
+    color: #fff;
+    vertical-align: middle;
+    outline: none;
+    margin-right: 5px;
+}
+.intro .tit .getstart input[type=email] + span{
+    position: absolute;
+    left: 16px;
+    top: 10px;
+    transition: all 0.5s ease;
+    color: rgba(255,255,255,0.5);
+    /* 이벤트 무시하는 명령 */
+    pointer-events: none;
+}
+.intro .tit .getstart input[type=email]:focus + span{
+    transform: translateY(-10px);
+    font-size: 11px;
+}
+.intro .tit .getstart button{
+    width: 140px;
+    height: 46px;
+    background: #E90617;
+    color: #fff;
+    font-size: 18px;
+    vertical-align: middle;
+    border-radius: 4px;
+    /* text-indent: -20px; */
+}
+
+/* main section */
+section{
+    border-bottom: 5px solid #232323;
+    padding: 0 25px;
+}
+
+.enjoy,
+.preview,
+.download,
+.kids{
+    height: 550px;
+    position: relative;
+}
+section .inner{
+    width: 1200px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+section .inner .desc,
+section .inner .imgbox{
+    float: left;
+    width: 50%;
+}
+section .inner .desc{
+    padding-top: 120px;
+}
+section .inner .imgbox{
+    text-align: center;
+    position: relative;
+}
+
+section .inner .desc h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+section .inner .desc p{
+    font-size: 18px;
+}
+section .inner .imgbox img{
+    height: 380px;
+}
+.download .inner .imgbox video{
+    width: 320px;
+    position: absolute;
+    left: 136px;
+    top: 34px;
+    z-index: -1;
+}
+
+/* 자주묻는질문 */
+.faq{
+    width: 100%;
+    padding: 60px 0;
+}
+.faq .faq_inner{
+    width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+.faq h2{
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.faq ul{
+    width: 100%;
+}
+.faq ul li{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.faq ul li:last-child{
+    margin-bottom: 0;
+}
+.faq ul li button{
+    width: 100%;
+    height: 84px;
+    background: #132144;
+    color: #fff;
+    text-align: left;
+    font-size: 23px;
+    text-indent: 27px;
+    position: relative;
+}
+.faq ul li:hover button{
+    background: #223361;
+}
+.faq ul li button span{
+    display: inline-block;
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    text-indent: -9999px;
+    position: absolute;
+    right: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.faq ul li button span::before{
+    display: inline-block;
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: #fff;
+    text-indent: -9999px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.faq ul li button span.on{
+    transform: rotate(45deg);
+}
+
+
+/* 아코디언 */
+.faq ul li p{
+    color: #fff;
+    font-size: 23px;
+    padding: 30px 27px;
+    background: #132144;
+    line-height: 33px;
+    display: none;
+    text-align: left;
+}
+.faq ul li p a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 메일 입력 */
+.faq .getstart{
+    position: relative;
+    display: inline-block;
+}
+.faq .getstart p{
+    margin:40px 0 20px;
+}
+.faq .getstart .start_email{
+    display: inline-block;
+    position: relative;
+}
+.faq .getstart input[type=email]{
+    width: 336px;
+    height: 46px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(0,0,0,0.5);
+    text-indent: 16px;
+    font-size: 15px;
+    color: #fff;
+    vertical-align: middle;
+    outline: none;
+    margin-right: 5px;
+}
+.faq .getstart input[type=email] + span{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    color: rgba(255,255,255,0.5);
+    /* 이벤트 무시하는 명령 */
+    pointer-events: none;
+}
+.faq .getstart input[type=email]:focus + span{
+    transform: translateY(-20px);
+    font-size: 11px;
+}
+.faq .getstart button{
+    width: 140px;
+    height: 46px;
+    background: #E90617;
+    color: #fff;
+    font-size: 18px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    padding: 50px 0;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+}
+footer .ft_inner{
+    width: 1200px;
+    margin: auto;
+}
+footer .ft_inner .sitemap{
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+footer .ft_inner .sitemap h5{
+    font-size: 12px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+footer .ft_inner .sitemap ul{
+    float: left;
+    width: 25%;
+}
+footer .ft_inner .sitemap ul li{
+    margin-bottom: 10px;
+}
+footer .ft_inner .sitemap ul li:last-child{
+    margin-bottom: 0;
+}
+footer .ft_inner .copy span a,
+footer .ft_inner .sitemap ul li a{
+    color: rgba(255,255,255,0.6);
+}
+footer .ft_inner .sitemap ul li:hover a{
+    text-decoration: underline;
+}
+
+footer .ft_inner .copy .lang{
+    display: inline-block;
+    width: 126px;
+    height: 32px;
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 300;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+footer .ft_inner .copy{
+    padding-top: 20px;
+}
+footer .ft_inner .copy span a:hover{
+    text-decoration: underline;
+}
