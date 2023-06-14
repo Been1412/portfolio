@@ -1,0 +1,143 @@
+@import url(./common.css);
+
+/* main */
+main .subvisual{
+    width: 100%;
+    height: 370px;
+    background: url(../images/sub_top_visual_menu.jpg)
+    no-repeat center top;
+}
+main .subvisual h2{
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 200px;
+}
+
+/* container */
+main .container{
+    width: 1150px;
+    margin: auto;
+    padding: 60px 0 120px;
+    overflow: hidden;
+}
+/* lnb */
+main .container .lnb{
+    width: 100px;
+    float: left;
+}
+main .container .lnb .menu li{
+    margin-bottom: 10px;
+}
+/* onclass */
+main .container .lnb .menu li.on a{
+    background: #2B2B2B;
+    color: #fff;
+}
+main .container .lnb .menu li:last-child{
+    margin-bottom: 0;
+}
+main .container .lnb .menu li a{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #f7f7f7;
+    color: #706E6F;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+main .container .lnb .menu li:nth-child(2) a,
+main .container .lnb .menu li:nth-child(4) a{
+    line-height: 18px;
+    height: auto;
+    padding: 33px 0;
+}
+
+/* contents */
+main .container .contents{
+    width: 848px;
+    float: right;
+}
+main .container .contents .tit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #4b4b4b;
+}
+main .container .contents .tit h2{
+    font-weight: 700;
+    color: #4C4A4B;
+    font-size: 32px;
+}
+
+main .container .contents ul.new_menu{
+    display: flex;
+    margin: 50px 0 35px;
+}
+main .container .contents .new_menu li{
+    width: 50%;
+}
+main .container .contents .new_menu li.on a{
+    background: #692C90;
+    color: #fff;
+}
+main .container .contents .new_menu li a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: #EFEFEF;
+    color: #2b2b2b;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+main .container .contents .select_product{
+    display: flex;
+    background: #f7f7f7;
+    justify-content: space-between;
+    padding: 15px 25px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+main .container .contents .select_product p{
+    color: #2b2b2b;
+    font-weight: 700;
+}
+main .container .contents .select_product .select_form fieldset{
+    border: none;
+}
+main .container .contents .select_product .select_form select{
+    width: 274px;
+    height: 35px;
+    border: 2px solid #e2e2e2;
+    line-height: 35px;
+    outline: none;
+    text-indent: 6px;
+}
+main .container .contents .select_product .select_form .btn_move{
+    width: 50px;
+    height: 35px;
+    background: #3e3e3e;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+}
+
+main .container .contents .img_product .tit2{
+    background: #f7f7f7;
+    padding: 24px 27px;
+    margin-top: -4px;
+}
+main .container .contents .img_product .tit2 h3{
+    color: #404040;
+    line-height: 26px;
+}
+main .container .contents .img_product .tit2 p{
+    color: #848484;
+    font-size: 13px;
+}
