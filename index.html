@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KimYoungBeen Portfolio</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/jquery.lightbox-0.5.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/jquery.lightbox-0.5-mod.js"></script>
     <script src="./js/main.js"></script>
 </head>
 <body>
@@ -37,89 +35,114 @@
         <section id="work">
             <div class="inner">
                 <h3>Work</h3>
-                <ul class="box">
-                    <li class="box_tit">Web Design</li>
-                    <li>
-                        <a href="./images/moment_img1.png">
-                            <img src="./images/work_webdesign1.png" alt="레고랜드">
-                            <div class="gallery_cover">
-                                <p>Legoland Redesign</p>
+                <div class="boxs webde">
+                    <h4 class="box_tit">Web Design</h4>
+                    <div>
+                        <img src="./images/work_webdesign1_legoland.png" alt="레고랜드">
+                        <div class="txt">
+                            <h4>레고랜드 코리아 웹사이트 리디자인</h4>
+                            <p>#메인페이지 #반응형 #PC #모바일</p>
+                            <a href="./legoland.html" target="_blank">상세보기 ></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="txt">
+                            <h4>김포페이 웹사이트 디자인</h4>
+                            <p>#메인페이지 #서브페이지 #PC</p>
+                            <a href="./gimpopay.html" target="_blank">상세보기 ></a>
+                        </div>
+                        <img src="./images/work_webdesign1_gimpopay.png" alt="김포페이">
+                    </div>
+                </div>
+                <div class="boxs coding">
+                    <h4 class="box_tit">Coding</h4>
+                    <ul class="box">
+                        <li>
+                            <a href="./coffine.html" target="_blank">
+                                <img src="./images/work_coding1.png" alt="커핀그루나루">
+                                <div class="gallery_cover">
+                                    <p>Coffine Gurunaru</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dlenc.html" target="_blank">
+                                <img src="./images/work_coding2.png" alt="대림">
+                                <div class="gallery_cover">
+                                    <p>DL E&C</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./netflex.html" target="_blank">
+                                <img src="./images/work_coding3.png" alt="넷플릭스">
+                                <div class="gallery_cover">
+                                    <p>Netflix(responsive)</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="boxs design">
+                    <h4 class="box_tit">Design</h4>
+                    <ul class="box">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="./images/work_design1.png" alt="파스타 메뉴판">
+                                <div class="gallery_cover">
+                                    <p>Pasta Menu</p>
+                                </div>
+                            </a>
+                            <div class="popup">
+                                <img src="./images/work_design_pasta.jpg" alt="파스타 메뉴판" class="pasta">
+                                <a href="javascript:void(0)"><img src="./images/work_close.png" alt="닫기"></a>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./images/moment_img2.png">
-                            <img src="./images/work_webdesign2.png" alt="김포페이">
-                            <div class="gallery_cover">
-                                <p>GimpoPay</p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="./images/work_design2.png" alt="동화송이">
+                                <div class="gallery_cover">
+                                    <p>Event Page</p>
+                                </div>
+                            </a>
+                            <div class="popup">
+                                <img src="./images/work_design_donghwa.jpg" alt="동화송이 이벤트" class="donghwa">
+                                <a href="javascript:void(0)"><img src="./images/work_close.png" alt="닫기"></a>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./images/moment_img3.png"><img src="./images/work_img.png" alt="이미지"></a>
-                    </li>
-                </ul>
-                <ul class="box">
-                    <li class="box_tit">Coding</li>
-                    <li>
-                        <a href="./images/moment_img4.png">
-                            <img src="./images/work_coding1.png" alt="커핀그루나루">
-                            <div class="gallery_cover">
-                                <p>Coffine Gurunaru</p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="./images/work_design3.png" alt="소생">
+                                <div class="gallery_cover">
+                                    <p>Sosaeng</p>
+                                </div>
+                            </a>
+                            <div class="popup">
+                                <img src="./images/work_design_sosaeng.jpg" alt="소생" class="sosaeng">
+                                <a href="javascript:void(0)"><img src="./images/work_close.png" alt="닫기"></a>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./images/moment_img5.png">
-                            <img src="./images/work_coding2.png" alt="대림">
-                            <div class="gallery_cover">
-                                <p>DL E&C</p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="./images/work_design5.png" alt="카드뉴스">
+                                <div class="gallery_cover">
+                                    <p>Card news</p>
+                                </div>
+                            </a>
+                            <div class="popup">
+                                <img src="./images/work_design_cardnews.jpg" alt="소생" class="cardnews">
+                                <a href="javascript:void(0)"><img src="./images/work_close.png" alt="닫기"></a>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./images/moment_img6.png">
-                            <img src="./images/work_coding3.png" alt="이미지">
-                            <div class="gallery_cover">
-                                <p>Netflix</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="box">
-                    <li class="box_tit">Design</li>
-                    <li>
-                        <a href="./images/moment_img7.png">
-                            <img src="./images/work_design1.png" alt="파스타 메뉴판">
-                            <div class="gallery_cover">
-                                <p>Pasta Menu</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./images/moment_img8.png">
-                            <img src="./images/work_design2.png" alt="동화송이">
-                            <div class="gallery_cover">
-                                <p>Donghwa Song-i</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./images/moment_img9.png">
-                            <img src="./images/work_design3.png" alt="소생">
-                            <div class="gallery_cover">
-                                <p>Sosaeng</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="about">
             <div class="inner">
                 <h3>About</h3>
-                <p>누군가의 삶의 일부가 되어 기억에 남는 디자이너가 되겠습니다.</p>
+                <p>익숙함 속에서 새로움을 찾아 사람들의 시선을 사로잡는 디자이너가 되겠습니다.</p>
                 <div class="profile">
                     <dl class="info">
                         <dt>name</dt>
