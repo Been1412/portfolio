@@ -48,8 +48,10 @@ header .inner ul.gnb li a.on{
 /* home */
 #home{
     width: 100%;
+    height: 992px;
     background: url(../images/home_bg.jpg)no-repeat;
     background-size: cover;
+    margin-top: 88px;
 }
 #home .inner{
     width: 1120px;
@@ -59,7 +61,7 @@ header .inner ul.gnb li a.on{
 #home .inner h2{
     font-size: 120px;
     line-height: 125.8%;
-    padding-top: 364px;
+    padding-top: 300px;
     color: #fff;
     position: relative;
 }
@@ -70,7 +72,7 @@ header .inner ul.gnb li a.on{
     background: url(../images/home_icon_point.png)no-repeat;
     position: absolute;
     left: -108px;
-    top: 346px;
+    top: 282px;
 }
 #home .inner .txt{
     font-weight: 200;
@@ -119,23 +121,56 @@ header .inner ul.gnb li a.on{
 .inner h3::after{
     right: 0;
 }
-
-#work .inner ul.box{
+#work .inner .boxs .box_tit{
+    font-weight: 700;
+    font-size: 20px;
+    color: #005698;
+    text-align: left;
+    margin-bottom: 24px;
+}
+#work .inner .webde>div{
+    display: flex;
+    margin-bottom: 50px;
+}
+#work .inner .webde>div img{
+    width: 50%;
+}
+#work .inner .webde>div .txt{
+    width: 50%;
+    text-align: center;
+    padding-top: 150px;
+    /* border: 1px solid red; */
+}
+#work .inner .webde>div .txt h4{
+    font-weight: 500;
+    font-size: 18px;
+}
+#work .inner .webde>div .txt p{
+    font-size: 14px;
+    margin: 8px 0 47px;
+}
+#work .inner .webde>div .txt a{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #7ABBEC;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+#work .inner .webde>div .txt a:hover{
+    background: #2C80D6;
+}
+/* 코딩 */
+#work .inner .coding ul{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
-#work .inner ul.box li{
-    width: 265px;
-    height: 265px;
-    line-height: 265px;
-    position: relative;
-}
-#work .inner ul.box li a{
+#work .inner .coding ul.box li a{
     display: block;
-    width: 265px;
-    height: 265px;
+    width: 360px;
+    height: 266px;
     overflow: hidden;
+    /* border: 1px solid red; */
     position: relative;
 }
 #work .inner ul.box li a .gallery_cover{
@@ -149,6 +184,61 @@ header .inner ul.gnb li a.on{
 }
 #work .inner ul.box li a .gallery_cover p{
     color: #fff;
+    line-height: 233px;
+    padding-top: 16px;
+}
+/* 디자인 */
+#work .inner .design ul{
+    display: flex;
+    justify-content: space-between;
+}
+#work .inner .design ul.box li{
+    position: relative;
+}
+#work .inner .design ul.box li a{
+    display: block;
+    width: 265px;
+    height: 265px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    position: relative;
+}
+/* 팝업 */
+#work .inner ul.box li .popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 100;
+    display: none;
+}
+#work .inner ul.box li .popup a{
+    display: block;
+    width: 48px;
+    height: 48px;
+    z-index: 101;
+    position: fixed;
+    right: 230px;
+    top: 100px;
+    /* border: 1px solid red; */
+}
+.pasta{
+    height: 800px;
+    margin-top: 90px;
+}
+.donghwa{
+    width: 90%;
+    margin-top: 120px;
+}
+.sosaeng{
+    width: 80%;
+    margin-top: 50px;
+}
+.cardnews{
+    width: 66%;
+    margin-top: 70px;
 }
 
 /* about */
@@ -184,13 +274,13 @@ header .inner ul.gnb li a.on{
 #about .inner .profile .info dt{
     width: 77px;
     float: left;
-    font-weight: 500;
+    font-weight: 700;
     color: #005698;
     margin-right: 92px;
     font-size: 15px;
 }
 #about .inner .profile .info dd{
-    margin-bottom: 16px;
+    margin-bottom: 21px;
     font-size: 14px;
     color: #555;
 }
@@ -200,7 +290,7 @@ header .inner ul.gnb li a.on{
     /* border: 1px solid red; */
 }
 #about .inner .profile .skill_wrap h4{
-    font-weight: 500;
+    font-weight: 700;
     color: #005698;
     font-size: 15px;
     margin-bottom: 25px;
