@@ -12,12 +12,11 @@ $(function(){
         $('html,body').animate({scrollTop:1080},1000)
     })
     $('ul.gnb li:eq(2) a').click(function(){
-        $('html,body').animate({scrollTop:2513},1000)
+        $('html,body').animate({scrollTop:3137},1000)
     })
     $('ul.gnb li:eq(3) a').click(function(){
-        $('html,body').animate({scrollTop:3436},1000)
+        $('html,body').animate({scrollTop:4031},1000)
     })
-
 
     $(window).scroll(function(){
         let num = $(this).scrollTop()
@@ -26,18 +25,18 @@ $(function(){
         if(num>=0 && num<1080){
             $('ul.gnb li a').removeClass('on')
             $('.home').addClass('on')
-        }else if(num>=1080 && num<2513){
+        }else if(num>=1080 && num<3137){
             $('ul.gnb li a').removeClass('on')
             $('.work').addClass('on')
-        }else if(num>=2513 && num<3436){
+        }else if(num>=3137 && num<4031){
             $('ul.gnb li a').removeClass('on')
             $('.about').addClass('on')
-        }else if(num>=3436){
+        }else if(num>=4031){
             $('ul.gnb li a').removeClass('on')
             $('.contact').addClass('on')
         }
 
-        if(num>=2358){
+        if(num>=2800){
             $('.chart .bar1').css({width:'85%'})
             $('.chart .bar2').css({width:'90%'})
             $('.chart .bar3').css({width:'90%'})
@@ -47,6 +46,7 @@ $(function(){
         }
     })
 
+    // 갤러리 호버
     $('ul.box li a').mouseenter(function(){
         $(this).find('.gallery_cover').stop().fadeIn()
     })
@@ -54,15 +54,13 @@ $(function(){
         $(this).find('.gallery_cover').stop().fadeOut()
     })
 
-    $('ul.box li a').lightBox({
-        overlayBgColor:'#000', //cover 색
-        overlayOpacity:0.9, //cover 투명도
-        imageLoading:"./images/lightbox_btn_loading.gif", // 이미지로딩
-        imageBtnClose:"./images/lightbox_btn_close.png", // 이미지 닫기 버튼
-        imageBtnPrev:"./images/lightbox_btn_prev.png", // 이전버튼
-        imageBtnNext:"./images/lightbox_btn_next.png", // 다음버튼
-        txtImage:"work", //작품
-        containerResizeSpeed:1000, //팝업 속도 조절
+    // 디자인 작업물
+    $('ul.box li').click(function(){
+        $(this).find('.popup').show()
+    })
+    $('.popup a').click(function(){
+        console.log('클릭')
+        $('.popup').fadeOut()
     })
 
 })
