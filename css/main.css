@@ -57,15 +57,25 @@ header .inner ul.gnb li a.on{
     width: 1120px;
     height: 1080px;
     margin: auto;
+    position: relative;
 }
-#home .inner h2{
+#home .inner .h2{
     font-size: 120px;
     line-height: 125.8%;
     padding-top: 300px;
     color: #fff;
     position: relative;
 }
-#home .inner h2::before{
+.splitting .char {
+    animation: slide-in 0.7s cubic-bezier(.5, 0, .5, 0.8) both;
+    animation-delay: calc(60ms * var(--char-index));
+  }
+  
+  @keyframes slide-in {
+    0%{transform: translateX(50px); opacity: 0;}
+    80%{transform: translateX(50px); opacity: 0;}
+  }
+#home .inner .h2::before{
     content: '';
     width: 92px;
     height: 76px;
@@ -73,19 +83,43 @@ header .inner ul.gnb li a.on{
     position: absolute;
     left: -108px;
     top: 282px;
+    transition: all 1s ease;
+    animation: point 3s ease;
+}
+@keyframes point {
+    0%{opacity: 1;}
+    30%{opacity: 1;}
+    50%{opacity: 0;}
+    70%{opacity: 1;}
+    100%{opacity: 1;}
 }
 #home .inner .txt{
     font-weight: 200;
     font-size: 50px;
     letter-spacing: -0.03em;
     color: #E6EEF4;
+    position: absolute;
+    left: 6px;
+    top: 445px;
+    transition: all 1s ease;
+    animation: txt 1s ease;
 }
 #home .inner .small_txt{
     font-weight: 200;
     font-size: 20px;
     color: rgba(255,255,255,0.5);
     margin-top: 13px;
+    position: absolute;
+    left: 6px;
+    top: 490px;
+    transition: all 1s ease;
+    animation: txt 1s ease;
 }
+@keyframes txt {
+    0%{left: 60px; opacity: 0;}
+    100%{left: 6px;}
+}
+
 
 /* work */
 #work{

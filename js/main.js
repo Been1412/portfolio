@@ -1,4 +1,6 @@
 $(function(){
+
+    Splitting();
     
     $('ul.gnb li').click(function(){
         $('ul.gnb li a').removeClass('on')
